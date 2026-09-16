@@ -1,0 +1,5 @@
+Témoin persistance — méthode git bundle (fallback sans secret dans le sandbox)
+Repo cible: https://github.com/7ysrng4r89-byte/qtem.git
+Date UTC: 2026-09-16T17:18:40Z
+Ce commit est livré via .bundle, à pousser depuis la machine de l'utilisateur.
+Aucun token, aucun push depuis le sandbox.
