@@ -287,10 +287,10 @@ DO $$
 DECLARE nf int; nt int; bad int;
 BEGIN
   SELECT count(*) INTO nf FROM public.foods
-  WHERE source = 'seed démo (valeurs non vérifiées)';
+  WHERE source = 'USDA FoodData Central (vérifié)';
   IF nf <> 21 THEN RAISE EXCEPTION 'seed: % foods (attendu 21)', nf; END IF;
   SELECT count(*) INTO bad FROM public.foods
-  WHERE source = 'seed démo (valeurs non vérifiées)'
+  WHERE source = 'USDA FoodData Central (vérifié)'
     AND (halal IS DISTINCT FROM TRUE OR lactose_free IS DISTINCT FROM TRUE);
   IF bad <> 0 THEN RAISE EXCEPTION 'seed: % aliments non conformes (halal/lactose_free)', bad; END IF;
   SELECT count(*) INTO nt FROM information_schema.tables
